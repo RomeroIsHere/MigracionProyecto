@@ -66,3 +66,23 @@ Route::get('/productos', [ProductosController::class,'index']);
 Route::get('/', function (){
     return view('informacion',);
 });
+
+Route::get('/', function (){
+    return view('homepage',);
+})->name('Homepage');
+// {{ route('Homepage') }}
+
+Route::get('/Menu', function (){
+    return view('menu',);
+})->name('Menu');
+// {{ route('Menu') }}
+
+Route::get('/Especialidades', function (){
+    return view('specials',);
+})->name('Specials');
+// {{ route('Specials') }}
+
+Route::get('/Contacto', function (){
+    return view('contact',);
+})->name('Contact');
+// {{ route('Contact') }}
